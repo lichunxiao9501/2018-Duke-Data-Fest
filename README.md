@@ -19,3 +19,6 @@ Pic 1: Total clicks of job posts by __states__ over time
 
 Pic 2: Total clicks of job posts by __industry__ over time
 ![total clicks by ind gif](https://github.com/lichunxiao9501/2018-Duke-Data-Fest/blob/master/pics/animation_1.gif)
+
+Pic 3: Shiny App Screenshot
+![shiny screenshot](https://github.com/lichunxiao9501/2018-Duke-Data-Fest/blob/master/pics/shiny_app_screenshot.png)
