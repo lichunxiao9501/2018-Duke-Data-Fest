@@ -25,8 +25,8 @@ library(shinydashboard)
 library(gridExtra)
 
 
-city_data <- read_csv("city_data.csv")
-categ_data <- read_csv("categ_data.csv")
+city_data <- read_csv("../data/city_data.csv")
+categ_data <- read_csv("../data/categ_data.csv")
 allCateg = unique(categ_data$normTitleCategory)
 
 sidebar <- dashboardSidebar(
@@ -111,15 +111,15 @@ server = function(input, output, session)
   })
   
   output$categImage <- renderUI({
-    img(src = "animation_1.gif", width="800")
+    img(src = "../pics/animation_1.gif", width="800")
   })
   
   output$MapTrendImage <- renderUI({
-    img(src = "total_jobs.gif", width="1000")
+    img(src = "../pics/total_jobs.gif", width="1000")
   })
   
   output$ModelImage <- renderUI({
-    img(src = "GP_Model.png", width="600")
+    img(src = "../pics/GP_Model.png", width="600")
   })
   
   observeEvent(input$do,{
@@ -170,32 +170,32 @@ server = function(input, output, session)
     
     if(input$categDataSort=="By value"){
       if(input$categDataSelect=="Number of clicks"){
-        imageName = "haha_1.gif"
+        imageName = "../pics/haha_1.gif"
       }else{
-        imageName = "animation_1.gif"
+        imageName = "../pics/animation_1.gif"
       }
     }else{
       if(input$categDataSelect=="Number of clicks"){
-        imageName = "haha_0.gif"
+        imageName = "../pics/haha_0.gif"
       }else{
-        imageName = "animation_0.gif"
+        imageName = "../pics/animation_0.gif"
       }
     }
     
     if(input$monthDataSelect=="Number of jobs"){
-      mapName = "total_jobs.gif"
+      mapName = "../pics/total_jobs.gif"
     }else if(input$monthDataSelect=="Number of clicks"){
-      mapName = "total_clicks.gif"
+      mapName = "../pics/total_clicks.gif"
     }else if(input$monthDataSelect=="Number of local clicks"){
-      mapName = "total_localClicks.gif"
+      mapName = "../pics/total_localClicks.gif"
     }else{
-      mapName = "localClicks_ratio.gif"
+      mapName = "../pics/localClicks_ratio.gif"
     }
 
     if(input$modelSelect=="Gaussian Process"){
-      modelName = "GP_Model.png"
+      modelName = "../pics/GP_Model.png"
     }else{
-      modelName = "TS_model.png"
+      modelName = "../pics/TS_model.png"
     }
     
     output$categImage <- renderUI({
